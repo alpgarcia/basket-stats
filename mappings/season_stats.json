@@ -1,0 +1,159 @@
+{
+  "mappings": {
+    "properties": {
+      "2P": {
+        "type": "integer"
+      },
+      "2P%": {
+        "type": "float"
+      },
+      "2PA": {
+        "type": "integer"
+      },
+      "3P": {
+        "type": "integer"
+      },
+      "3P%": {
+        "type": "float"
+      },
+      "3PA": {
+        "type": "integer"
+      },
+      "3PAr": {
+        "type": "float"
+      },
+      "AST": {
+        "type": "integer"
+      },
+      "AST%": {
+        "type": "float"
+      },
+      "Age": {
+        "type": "integer"
+      },
+      "BLK": {
+        "type": "integer"
+      },
+      "BLK%": {
+        "type": "float"
+      },
+      "BPM": {
+        "type": "float"
+      },
+      "DBPM": {
+        "type": "float"
+      },
+      "DRB": {
+        "type": "integer"
+      },
+      "DRB%": {
+        "type": "float"
+      },
+      "DWS": {
+        "type": "integer"
+      },
+      "FG": {
+        "type": "integer"
+      },
+      "FG%": {
+        "type": "float"
+      },
+      "FGA": {
+        "type": "integer"
+      },
+      "FT": {
+        "type": "integer"
+      },
+      "FT%": {
+        "type": "float"
+      },
+      "FTA": {
+        "type": "integer"
+      },
+      "FTr": {
+        "type": "float"
+      },
+      "G": {
+        "type": "integer"
+      },
+      "GS": {
+        "type": "integer"
+      },
+      "MP": {
+        "type": "integer"
+      },
+      "OBPM": {
+        "type": "float"
+      },
+      "ORB": {
+        "type": "integer"
+      },
+      "ORB%": {
+        "type": "float"
+      },
+      "OWS": {
+        "type": "integer"
+      },
+      "PER": {
+        "type": "float"
+      },
+      "PF": {
+        "type": "integer"
+      },
+      "PTS": {
+        "type": "integer"
+      },
+      "Player": {
+        "type": "keyword"
+      },
+      "Pos": {
+        "type": "keyword"
+      },
+      "STL": {
+        "type": "integer"
+      },
+      "STL%": {
+        "type": "float"
+      },
+      "TOV": {
+        "type": "integer"
+      },
+      "TOV%": {
+        "type": "float"
+      },
+      "TRB": {
+        "type": "integer"
+      },
+      "TRB%": {
+        "type": "float"
+      },
+      "TS%": {
+        "type": "float"
+      },
+      "Tm": {
+        "type": "keyword"
+      },
+      "USG%": {
+        "type": "float"
+      },
+      "VORP": {
+        "type": "float"
+      },
+      "WS": {
+        "type": "float"
+      },
+      "WS/48": {
+        "type": "float"
+      },
+      "Year": {
+        "type": "integer"
+      },
+      "csv_id": {
+        "type": "keyword"
+      },
+      "eFG%": {
+        "type": "float"
+      }
+    }
+  }
+}

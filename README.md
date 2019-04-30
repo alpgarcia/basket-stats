@@ -32,6 +32,36 @@ Some example visualizations built on Kibana 7:
 
 ![Top Scorers Table](assets/screenshots/top_scorers_table.png)
 
+### card_generator.py
+
+Reads a list of players and years (see [draft.csv](draft.csv)) and generates
+another CSV with a row per each (player, year, team) and some basic attributes
+which values are between 1 and 4 and are based on real stats retrieved from
+the ElasticSearch index created using [upload_to_es.py script](#upload_to_espy).
+
+Example:
+```
+python3 scripts/card_generator.py draft.csv cards.csv
+
+Card Generator v1.0 - Copyright (C) 2019 Alberto Pérez García-Plaza
+[Card Generator] Draft read from draft.csv
+[Card Generator] Card data available in cards.csv
+
+```
+
+Output file (`cards.csv` in the example) will look like as follows:
+```
+Name,Year,Team,Position,2PT,3PT,DRB,ORB,AST,BLK,STL,SKL
+Michael Jordan*,1991,CHI,SG,4,2,3,2,3,3,4,4
+Michael Jordan*,1997,CHI,SG,3,3,3,2,3,3,3,4
+Larry Bird*,1986,BOS,SF,3,4,3,3,4,3,3,3
+Larry Bird*,1987,BOS,SF,4,3,3,2,4,3,3,3
+Jason Williams,2001,SAC,PG,3,2,1,1,4,2,3,2
+Jason Williams,2007,MIA,PG,3,2,1,1,4,1,3,3
+Jason Williams,2008,MIA,PG,2,3,1,1,4,1,3,3
+Pau Gasol,2010,LAL,C,4,1,4,3,3,3,1,3
+```
+
 ## Dashboards
 
 ### Kibana 7

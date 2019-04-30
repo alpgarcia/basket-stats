@@ -5,6 +5,8 @@ and Kibana.
 Available stuff up to now includes:
 
 * [Scripts](#scripts): available Python scripts.
+  * [upload_to_es.py](#upload_to_espy)
+  * [card_generator.py](#card_generatorpy)
 * [Dashboards](#dashboards)
   * [Kibana 7](#kibana-7)
 
@@ -34,7 +36,7 @@ Some example visualizations built on Kibana 7:
 
 ### card_generator.py
 
-Reads a list of players and years (see [draft.csv](draft.csv)) and generates
+Reads a list of players and years (e.g. [draft.csv](draft.csv)) and generates
 another CSV with a row per each (player, year, team) and some basic attributes
 which values are between 1 and 4 and are based on real stats retrieved from
 the ElasticSearch index created using [upload_to_es.py script](#upload_to_espy).
@@ -49,7 +51,20 @@ Card Generator v1.0 - Copyright (C) 2019 Alberto Pérez García-Plaza
 
 ```
 
-Output file (`cards.csv` in the example) will look like as follows:
+Input file [draft.csv](draft.csv):
+```
+name,year
+Michael Jordan*,1991
+Michael Jordan*,1997
+Larry Bird*,1986
+Larry Bird*,1987
+Jason Williams,2001
+Jason Williams,2007
+Jason Williams,2008
+Pau Gasol, 2010
+```
+
+Output file [cards.csv](cards.csv):
 ```
 Name,Year,Team,Position,2PT,3PT,DRB,ORB,AST,BLK,STL,SKL
 Michael Jordan*,1991,CHI,SG,4,2,3,2,3,3,4,4

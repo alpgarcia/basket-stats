@@ -304,11 +304,15 @@ def main():
     Player cards are written in another CSV file.
 
     """
+    print("Card Generator v1.0 - Copyright (C) 2019 Alberto Pérez García-Plaza")
+
     parser = argparse.ArgumentParser(description='Card generator')
     parser.add_argument('draft_filepath', type=str, help='Input CSV file')
     parser.add_argument('cards_filepath', type=str, help='Output CSV file')
 
     args = parser.parse_args()
+
+    print("[Card Generator] Draft read from %s" % args.draft_filepath)
 
     es_conn = Elasticsearch(['http://localhost:9200'], retry_on_timeout=True, timeout=100, verify_certs=False)
     card_generator = CardGenerator(es_conn)
@@ -318,6 +322,8 @@ def main():
         player_cards.extend(card_generator.create_player_cards(player[0], player[1]))
 
     write_cards_csv(args.cards_filepath, player_cards)
+
+    print("[Card Generator] Card data available in %s" % args.cards_filepath)
 
 
 if __name__ == '__main__':

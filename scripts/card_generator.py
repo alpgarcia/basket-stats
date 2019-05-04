@@ -239,8 +239,10 @@ class CardGenerator:
             search = search.filter('term', Year=year)
 
         for hit in search.scan():
-            two_p = self.__calc_attr(thresholds[self.TWO_P], float(hit[self.TWO_P])) if self.TWO_P in hit else 1
-            three_p = self.__calc_attr(thresholds[self.THREE_P], float(hit[self.THREE_P])) if self.THREE_P in hit else 1
+            two_p = self.__calc_attr(thresholds[self.TWO_P], float(hit[self.TWO_P])) \
+                if self.TWO_P in hit and int(hit['2PA']) > 20 else 1
+            three_p = self.__calc_attr(thresholds[self.THREE_P], float(hit[self.THREE_P])) \
+                if self.THREE_P in hit and int(hit['3PA']) > 20 else 1
             drb = self.__calc_attr(thresholds[self.DRB], float(hit[self.DRB])) if self.DRB in hit else 1
             orb = self.__calc_attr(thresholds[self.ORB], float(hit[self.ORB])) if self.ORB in hit else 1
             ast = self.__calc_attr(thresholds[self.AST], float(hit[self.AST])) if self.AST in hit else 1
